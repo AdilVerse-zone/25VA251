@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>data value types in js</title>
+</head>
+<body>
+    <script>
+        // JS VALUE TYPE IN JS :- PRIMITIVE - single value variable which are immutable.1. string 2. booloean 3. undefined 4. null 5. Bigint 6. symbol.
+        var myName="ADIL";
+        console.log(myName);
+        console.log(typeof(myName));
+
+        //number
+        var myMob=9555269834;
+        console.log(myName + "mobile number is" + myMob);
+
+        //boolean
+        var isMarried=false;
+        console.log(myName + " is married ?" + isMarried);
+        
+        //undefine
+        var myEmail;
+        console.log(myEmail);
+        console.log(typeof(myEmail));
+
+        //null
+        var myAddress=null;
+        console.log(myAddress);
+        console.log(typeof(myAddress));
+
+        //Bigint
+        var myVal=BigInt(33244457574);
+        console.log(myVal);
+        console.log(typeof(myVal));
+
+        //SYMBOL
+         var name1=Symbol("adil");
+         var name2=Symbol("adil");
+         console.log(name1==name2);
+    
+        //refrence(object type) typed==mutable in memory and keep value in pair
+        //object ,function ,array
+        //object are defined in pair of key and value
+         
+        let myInfo={
+        name:"adil", age:21, mob:9555269834, add:null, branch:"CSE",section:15
+        };
+      console.log(myInfo);
+      console.log(myInfo.name);// access object's key i.e name
+    
+      //object length
+
+      let keys = Object.keys(myInfo);
+      console.log("myInfo Object  length" + keys.length);
+
+
+
+
+
+      //function - block of code that perform perticular task
+       function cal(){
+        var num1=21;
+        var num2=22;
+        var res=num1+num2;
+        console.log("Addition of two number is " + res);
+        console.log(typeof(cal));
+       }
+       cal();
+    
+    //array- collection of any data type in js
+    //for similar student 
+    let studentList=["adil","aditya","avish","aadi"];
+    console.log(studentList[0]);
+    //for any data type
+    let adityaInfo=["aditya patel", 23,false,null,"CSE,20"];
+    console.log(adityaInfo[1]);
+    console.log(typeof(adityaInfo));
+
+    //to itterate array member 
+    //    for(let i=0; i<adityaInfo.length;i++){
+    //     console.log(adityaInfo[i]);
+    //    }
+    
+
+    
+    
+    
+    
+    </script>
+</body>
+</html>

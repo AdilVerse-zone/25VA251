@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loops in JS</title>
+</head>
+<body>
+    <script>
+        // Loops are fundamental in programming, allowing you to execute 
+        // a block of code multiple times based on a condition.
+        //  JavaScript provides several types of loops to handle repetitive tasks efficiently.
+         //for loop......
+
+         let studentList=["Adil","Aditya","Avish","shaurya"];
+
+        //  for(let i=0;i<studentList.length;i++){
+        //     console.log(studentList[i]);
+        //  }
+
+         //while loop...
+         let i=0;
+         while(i<studentList.length){
+            console.log(studentList[i]);
+            i++;
+         }
+         //for of loop: The for...of loop in JavaScript allows you to iterate over iterable objects like arrays, strings, 
+         // maps, node lists, and more. It's a cleaner and more concise way to loop through elements of these objects compared to traditional for loops.
+   
+         for(let x of studentList){
+            console.log(x);
+         }
+
+         //for.. in loop: n JavaScript, the for...in loop is used to iterate over the enumerable property keys of an object (including inherited enumerable properties).
+
+// It is not recommended for iterating over arrays (because the order is not guaranteed and it may include inherited keys), but it’s useful for objects.
+
+
+   
+   
+   </script>
+</body>
+</html>
