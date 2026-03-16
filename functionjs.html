@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Function : block of code , design to perform specific task
+        
+        // Function with parameter
+        function demo1(text) {
+            console.log("Hello "+ text);
+        }
+        demo1("World");
+
+        // Function with default parameter
+        function add(a,b=22) {
+            var num1=a;
+            var num2=b;
+            var res=num1+num2;
+            console.log("Addition of two numbers is :" + res);
+        }
+        add(34);
+
+        // Synchronous (sync) operations run sequentially, blocking further
+        //      execution until a task completes, providing immediate consistency.
+
+        // Asynchronous (async) operations run concurrently or non-blockingly,
+        //        allowing other tasks to proceed while waiting for a response, boosting efficiency and scalability in I/O-heavy applications....
+
+        function add(a,b) {
+            console.log("Addition is :" + (a+b));
+        }
+        function sub(a,b) {
+            console.log("Substraction is :" + (a-b));
+        }
+        function mul(a,b) {
+            console.log("Multiplication is :" + (a*b));
+        }
+
+        add(10,5);
+        sub(10,5);
+        mul(10,5);
+
+        // one line arrow function
+        let msg1 = age => age >= 18 && console.log("valid age");
+        msg1(19);
+
+        // arrow function with multiple lines
+        let msg2=(age)=> {
+            if (age>=18) {
+                console.log("valid age");
+            }
+        }
+        msg2(23);
+
+        // call back function
+
+        function cal(a, b, callback) {
+            var num1 = 12;
+            console.log("First number is :" + num1);
+
+            var num2 = 18;
+            console.log("Second number is :" + num2);
+
+            var res = num1 + num2;
+            callback(res);
+        }
+
+        function display(res) {
+        console.log("Result is :" + res);
+        }
+        cal(0, 0, display); // just pass anything for a, b
+
+        // or
+
+        function cal(a, b, callback) {
+            console.log("First number is :" + a);
+            console.log("Second number is :" + b);
+            var res = a + b;
+            callback(res);
+        }
+        function display(res) {
+        console.log("Result is :" + res);
+        }
+
+        cal(12, 18, display);
+
+        // call back using the setTimeout API
+
+        function greeting() {
+            document.write("Hello Mr IronMan");
+        }
+        function loading() {
+            document.write("Data Loading....");
+        }
+        loading();
+        setTimeout(greeting,2000);
+
+        // CALL BACK HELL - Jab ek callback ke andar dusra callback, uske andar fir dusra… aise chain ban jati hai (deep nesting) → usko callback hell bolte hain
+        // Function ke andar function ke andar function… bahut zyada level tak
+
+        // STAGES OF PROMISE
+        // Pending - Initial state - Kaam chal raha hota hai
+        // Fulfilled - Kaam successfully complete ho gaya , Result mil gaya
+        // Rejected - Kaam fail ho gya , error aa gya
+
+        setTimeout(() => {
+            console.log("Anmol Rajput");
+
+            setTimeout(() => {
+                console.log("Pranav Rajput");
+
+                setTimeout(() => {
+                    console.log("Anshu Rajput");
+
+                     setTimeout(() => {
+                         console.log("Gajendra Rajput");
+            }, 1000);
+
+        }, 1000);
+
+    }, 1000);
+
+}, 1000);
+
+// Fetch API
+
+async function userData() {
+    let userResponse=await fetch('https://api.escuelajs.co/api/v1/products');
+    let userDataRes=await userResponse.json();
+    console.log(userDataRes);
+}
+userData();
+
+// asycn await using try catch
+
+async function productDetails() {
+    try {
+        let proRes = await fetch('https://api.escuelajs.co/api/v1/products');
+        let proResData = await proRes.json();
+        console.log(proResData);
+    } catch (error) {
+        console.log("not valid data " + error);
+    }
+}
+productDetails();
+
+
+
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
