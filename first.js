@@ -15,3 +15,16 @@ console.log(fullName);//dynamic type
 //reserved word cant be variable name
 //camelcase(first letter captial of each word)
 
+//primitive data type(7 num,bool,string....)
+//non primitive data type(object)
+
+const student = {
+    fullName : "Adil Sohel",
+    age : 21 ,
+    cgpa : 8.5 ,
+    ispass : true,
+};
+student["age"] = student["age"] + 1;
+console.log(student.age);
+
+
