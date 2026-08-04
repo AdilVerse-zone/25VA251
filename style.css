@@ -1,4 +1,4 @@
-#header{
+/* #header{
     background-color: antiquewhite;
     color: aqua;
 
@@ -6,7 +6,7 @@
 }
 .heading{
     background-color: aqua;
-}
+} */
 
 .box{
     height: 100px;
@@ -15,4 +15,19 @@
     margin: 5px;
     text-align: center;
     background-color: rgb(84, 84, 210);
+}
+
+/* #box{
+    height: 200px;
+    width: 100px;
+    background-color: aquamarine;
+    border: 2px solid black;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    border-radius: 20px;
+} */
+
+.newclass{
+    background-color: green;
 }
